@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Obsolete", "Obsolete", "{12
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConsole", "SimpleConsole\SimpleConsole.csproj", "{4F471076-139A-42F0-A742-9908313577B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLib", "DemoLib\DemoLib.csproj", "{69B133E3-CB50-4711-80F1-06A423D03686}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{4F471076-139A-42F0-A742-9908313577B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F471076-139A-42F0-A742-9908313577B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F471076-139A-42F0-A742-9908313577B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69B133E3-CB50-4711-80F1-06A423D03686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B133E3-CB50-4711-80F1-06A423D03686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69B133E3-CB50-4711-80F1-06A423D03686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69B133E3-CB50-4711-80F1-06A423D03686}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

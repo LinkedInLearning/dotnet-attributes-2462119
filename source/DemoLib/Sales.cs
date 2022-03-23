@@ -3,7 +3,7 @@ namespace DemoLib {
  
   public class Sales {
 
-   
+    [Obsolete]
     public bool GetCustomerApproval( decimal  salesAmount ) {
       if (salesAmount > 500)
       {

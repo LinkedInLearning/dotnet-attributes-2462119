@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BigStar.Brokerage.Tests\BigStar.Brokerage.Tests.csproj" />
+    <ProjectReference Include="..\ZUnit.Core\ZUnit.Core.csproj" />
   </ItemGroup>
 
 </Project>

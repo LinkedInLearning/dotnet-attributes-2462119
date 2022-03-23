@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BigStar.Brokerage\BigStar.Brokerage.csproj" />
-    <ProjectReference Include="..\ZUnit.Core\ZUnit.Core.csproj" />
   </ItemGroup>
 
 </Project>

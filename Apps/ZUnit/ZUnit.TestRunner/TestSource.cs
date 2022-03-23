@@ -4,11 +4,11 @@ using System.Linq;
 using System.Reflection;
 using ZUnit.Core;
 
-namespace ZUnit.ZUnit.TestRunner {
+namespace ZUnit.TestRunner {
 
   public sealed class TestSource {
 
-    public List<ZUnit.Core.TestInfo> GetTestCases() {
+    public List<TestInfo> GetTestCases() {
       return GetAttributeInformation();
     }
 
@@ -27,7 +27,7 @@ namespace ZUnit.ZUnit.TestRunner {
                 from att in met.GetCustomAttributes(true)
                 where att is FactAttribute
 
-                select new ZUnit.Core.TestInfo { Method = met, MethodName = met.Name, Fact = att as FactAttribute, ClassName = met.DeclaringType.Name };
+                select new TestInfo { Method = met, MethodName = met.Name, Fact = att as FactAttribute, ClassName = met.DeclaringType.Name };
 
         theMethods.AddRange(q.ToList());
 
@@ -56,7 +56,7 @@ namespace ZUnit.ZUnit.TestRunner {
         }
         catch (TargetInvocationException ex)
         {
-          var myException = ex.InnerException as ZUnit.Core.ZUnitException;
+          var myException = ex.InnerException as ZUnitException;
           currentTestInfo.TestPassed = false;
           currentTestInfo.TestFailedMessage = myException.UserMessage;
         }

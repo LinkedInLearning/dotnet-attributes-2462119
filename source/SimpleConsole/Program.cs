@@ -8,7 +8,14 @@ public class SimpleConsole {
 
     bool approved = sales.GetCustomerApproval(350M);
 
-    Console.WriteLine($"Sale is approved");
+    if (approved)
+    {
+      Console.WriteLine($"Sale is approved");
+    }
+    else {
+      Console.WriteLine($"Sale is not approved");
+    }
+   
 
   }
 }

@@ -1,9 +1,10 @@
-﻿namespace DemoLib {
-  [Obsolete]
+﻿using System.Runtime.CompilerServices;
+namespace DemoLib {
+ 
   public class Sales {
 
-    [Obsolete ("Use the IsValidSale method instead")]
-    public bool GetCustomerApproval(decimal salesAmount) {
+   
+    public bool GetCustomerApproval( decimal  salesAmount ) {
       if (salesAmount > 500)
       {
         return false;

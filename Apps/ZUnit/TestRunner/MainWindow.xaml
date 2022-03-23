@@ -1,0 +1,127 @@
+﻿<Window x:Class="ZUnit.TestRunner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="800"
+        Width="900"
+        FontSize='18'
+        WindowStartupLocation='CenterScreen'>
+
+  <TabControl>
+    <TabItem Header='Facts'>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height='1*' />
+          <RowDefinition Height='10*' />
+        </Grid.RowDefinitions>
+        <Button Content='Show Facts...'
+                Click='RunButton_Click' />
+
+        <ListBox ItemsSource='{Binding}'
+                 Grid.Row='1'
+                 x:Name='FactsListBox'>
+          <ListBox.ItemTemplate>
+            <DataTemplate>
+              <StackPanel Margin='10'>
+                <TextBlock Text='{Binding MethodName}'
+                           FontWeight='Bold' Foreground='SeaGreen'/>
+                <StackPanel Margin='10,0'>
+
+                  <StackPanel Orientation='Horizontal'>
+                    <TextBlock Text='Skip:'
+                               MinWidth='120' />
+                    <TextBlock Text='{Binding Fact.Skip}' />
+                  </StackPanel>
+                  <StackPanel Orientation='Horizontal'>
+                    <TextBlock Text='Timeout:'
+                               MinWidth='120' />
+                    <TextBlock Text='{Binding Fact.Timeout}' />
+                  </StackPanel>
+                </StackPanel>
+              </StackPanel>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+      </Grid>
+    </TabItem>
+    <TabItem Header='Traits'>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height='1*' />
+          <RowDefinition Height='10*' />
+        </Grid.RowDefinitions>
+        <Button Content='Show Traits...'
+                Click='TraitsButton_Click'
+                x:Name='TraitsButton' />
+
+        <ListBox ItemsSource='{Binding}'
+                 Grid.Row='1'
+                 x:Name='TraitsListBox'>
+          <ListBox.ItemTemplate>
+            <DataTemplate>
+              <StackPanel Margin='10'>
+                <TextBlock Text='{Binding MethodName}'
+                           FontWeight='Bold'
+                           Foreground='Coral' />
+                <StackPanel Margin='10,0'>
+
+                  <StackPanel Orientation='Horizontal'>
+                    <TextBlock Text='Name:'
+                               MinWidth='120' />
+                    <TextBlock Text='{Binding Trait.Name}' />
+                  </StackPanel>
+                  <StackPanel Orientation='Horizontal'>
+                    <TextBlock Text='Value:'
+                               MinWidth='120' />
+                    <TextBlock Text='{Binding Trait.Value}' />
+                  </StackPanel>
+                </StackPanel>
+              </StackPanel>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+      </Grid>
+    </TabItem>
+
+    <TabItem Header='Run'>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height='1*' />
+          <RowDefinition Height='10*' />
+        </Grid.RowDefinitions>
+        <Button Content='Run Tests...'
+                Click='RunButton_Click_1'
+                x:Name='RunButton' />
+
+        <ListBox ItemsSource='{Binding}'
+                 Grid.Row='1'
+                 x:Name='ResultsListBox'>
+          <ListBox.ItemTemplate>
+            <DataTemplate>
+              <StackPanel Margin='10'>
+                <TextBlock Text='{Binding MethodName}'
+                           FontWeight='Bold' />
+                <StackPanel Margin='10,0'>
+
+                  <StackPanel Orientation='Horizontal'>
+                    <TextBlock Text='Test Passed:'
+                               MinWidth='120' />
+                    <TextBlock Text='{Binding TestPassed}' />
+                  </StackPanel>
+                  <StackPanel Orientation='Horizontal'>
+                    <TextBlock Text='User Message:'
+                               MinWidth='120' />
+                    <TextBlock Text='{Binding TestFailedMessage}' />
+                  </StackPanel>
+                </StackPanel>
+              </StackPanel>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+      </Grid>
+    </TabItem>
+  </TabControl>
+</Window>

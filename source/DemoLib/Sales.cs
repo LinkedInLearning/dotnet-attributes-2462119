@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 namespace DemoLib {
- 
+
+  
   public class Sales {
 
     [Obsolete]
@@ -15,5 +16,12 @@ namespace DemoLib {
       }
     
     }
+    [Obsolete]
+    public void GetSalesTax()
+    { 
+    }
+    [Obsolete]
+    public void GetManagerApproval()
+    { }
   }
 }

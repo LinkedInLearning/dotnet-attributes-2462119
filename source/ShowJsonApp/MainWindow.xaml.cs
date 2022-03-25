@@ -26,7 +26,7 @@ namespace SimpleWpfApp {
       var card = new DataLib.CollectableCard
       {
         Id = 101,
-        Name = "Mingle",
+        CardName = "Mingle",
         Slogan = "Double Trouble",
         CatalogPrice = 5.99M,
         BidPrice = 15.95M,
@@ -36,8 +36,18 @@ namespace SimpleWpfApp {
 
         TeamName = TeamNames.BlueShadows,
       };
-     var result =  Smasher.Core.JsonSmasher.MakeJson(card);
-    this.ResultsTextBox.Text = result;
+  
+      var store = new DataLib.RetailStore
+      { 
+        StoreNumber = 243,
+        BranchName = "Summer Valley Mall",
+        SalesRegion = "Northwest",
+        IsFranchised = true
+      };
+
+      var result = Smasher.Core.JsonSmasher.MakeJson(card);
+      result += Smasher.Core.JsonSmasher.MakeJson(store);
+      this.ResultsTextBox.Text = result;
     }
   }
 }

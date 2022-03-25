@@ -24,6 +24,7 @@ namespace Smasher.Core {
 
 			StringBuilder sb = new StringBuilder();
       sb.Append('{');
+      sb.AppendLine();
       foreach (var prop in classProps)
       {
         sb.AppendLine($"   \"{prop.Name}\" : \"{prop.GetValue(theClass)}\",");
@@ -31,6 +32,7 @@ namespace Smasher.Core {
       }
 
       sb.Append('}');
+      sb.AppendLine();
 
       return sb.ToString();
     }

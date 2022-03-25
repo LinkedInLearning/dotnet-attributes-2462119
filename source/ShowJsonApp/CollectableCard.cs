@@ -5,7 +5,7 @@ namespace DataLib {
   
   public class CollectableCard {
     public int Id { get; set; }
-    public string? Name { get; set; }
+    public string? CardName { get; set; }
     public string? Slogan { get; set; }
 
     public TeamNames TeamName { get; set; }

@@ -1,8 +1,9 @@
-﻿using Smasher.Core;
+﻿using Json.Smasher.Core;
+using Smasher.Core;
 
 namespace DataLib {
 
-  
+  [Sort]
   public class CollectableCard {
     public int Id { get; set; }
     public string? CardName { get; set; }

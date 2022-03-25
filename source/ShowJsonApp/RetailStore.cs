@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataLib
 {
-	[Sort]
+	[Sort(ReverseOrder = true)]
 	internal class RetailStore
 	{
 		

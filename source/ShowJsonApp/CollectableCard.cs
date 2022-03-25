@@ -3,7 +3,7 @@ using Smasher.Core;
 
 namespace DataLib {
 
-  [Sort]
+  [Sort(ReverseOrder = true)]
   public class CollectableCard {
     public int Id { get; set; }
     public string? CardName { get; set; }

@@ -9,5 +9,6 @@ namespace Json.Smasher.Core
 	[AttributeUsage(AttributeTargets.Class,AllowMultiple =false)]
 	public class SortAttribute :Attribute
 	{
+
 	}
 }

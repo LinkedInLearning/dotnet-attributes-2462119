@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Json.Smasher.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -20,6 +21,12 @@ namespace Smasher.Core {
 		
 
     // find the attribute...
+    var atts = type.GetCustomAttributes(true);
+			if (atts.Any(x=> x is SortAttribute))
+			{
+        var att = atts.FirstOrDefault(x=> x is SortAttribute) as SortAttribute;  
+			}
+      classProps = classProps.OrderBy(x=>x.Name).ToArray();  
     // reverse the sort order when requested
 
 			StringBuilder sb = new StringBuilder();

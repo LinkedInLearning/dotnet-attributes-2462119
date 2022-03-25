@@ -24,9 +24,18 @@ namespace Smasher.Core {
     var atts = type.GetCustomAttributes(true);
 			if (atts.Any(x=> x is SortAttribute))
 			{
-        var att = atts.FirstOrDefault(x=> x is SortAttribute) as SortAttribute;  
-			}
-      classProps = classProps.OrderBy(x=>x.Name).ToArray();  
+        var att = atts.FirstOrDefault(x=> x is SortAttribute) as SortAttribute;
+        if (att.ReverseOrder)
+        {
+          classProps = classProps.OrderByDescending(x => x.Name).ToArray();
+        }
+        else
+        {
+
+          classProps = classProps.OrderBy(x => x.Name).ToArray();
+        }
+      }
+      
     // reverse the sort order when requested
 
 			StringBuilder sb = new StringBuilder();

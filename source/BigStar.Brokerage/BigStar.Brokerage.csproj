@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ZUnit.Core\ZUnit.Core.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -8,9 +8,9 @@ namespace ZUnit.TestRunner {
 
   public sealed class TestSource {
 
-   
+    
 
-    private List<TestInfo> GetAttributeInformation() {
+    public List<TestInfo> GetTestCases() {
       List<TestInfo> theMethods = new List<TestInfo>();
       var assemb = Assembly.GetExecutingAssembly();
       var refAssemblies = assemb.GetReferencedAssemblies();
@@ -23,25 +23,23 @@ namespace ZUnit.TestRunner {
         var q = from ty in currentTypes
                 from met in ty.GetMethods()
                 from att in met.GetCustomAttributes(true)
-                where att is FactAttribute
+                where att is FactAttribute || att is TraitAttribute
 
-                select new TestInfo { Method = met, MethodName = met.Name, Fact = att as FactAttribute, ClassName = met.DeclaringType.Name };
+                select new TestInfo { Method = met, 
+                                      MethodName = met.Name, 
+                                      Fact = att as FactAttribute, 
+                                      Trait = att as TraitAttribute,
+                                      ClassName = met.DeclaringType.Name };
 
         theMethods.AddRange(q.ToList());
 
-        var q2 = from t in currentTypes
-                 from m in t.GetMethods()
-                 from att in m.GetCustomAttributes(true)
-                 where att is TraitAttribute
 
-                 select new TestInfo { Method = m, MethodName = m.Name, Trait = att as TraitAttribute };
-        theMethods.AddRange(q2.ToList());
       }
       return theMethods;
     }
 
     public List<TestInfo> RunTests() {
-      var factCases = GetAttributeInformation().Where(x => x.Fact != null).ToList(); ;
+      var factCases = GetTestCases().Where(x => x.Fact != null).ToList(); ;
 
       for (int counter = 0; counter < factCases.Count; counter++)
       {

@@ -8,9 +8,7 @@ namespace ZUnit.TestRunner {
 
   public sealed class TestSource {
 
-    public List<TestInfo> GetTestCases() {
-      return GetAttributeInformation();
-    }
+   
 
     private List<TestInfo> GetAttributeInformation() {
       List<TestInfo> theMethods = new List<TestInfo>();

@@ -11,7 +11,7 @@ namespace DemoLib {
   // .Parse(), parses comma separated string
 
   // bitwise operators
-  [Flags]
+  //[Flags]
   public enum TourDays {
    
     None =      0x00000000,

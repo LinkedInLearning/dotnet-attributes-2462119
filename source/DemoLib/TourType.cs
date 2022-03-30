@@ -8,7 +8,7 @@ namespace DemoLib {
 
   // enumerated constants
   // Readable names for constant values
-  // Generally used for list of mutual exclusive value
+  // Generally used for list of mutual exclusive values
   public enum TourType {
     Walk,
     Bike,

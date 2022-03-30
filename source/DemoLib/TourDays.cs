@@ -11,20 +11,20 @@ namespace DemoLib {
   // .Parse(), parses comma separated string
 
   // bitwise operators
-  //[Flags]
-  public enum TourDays {
-   
-    None =      0x00000000,
-    Monday =    0x00000001, //1
-    Tuesday =   0x00000010, //2
-    Wednesday = 0X00000100, //4
-    Thursday =  0x00001000, //8  
-    Friday =    0x00010000, //16
-    Saturday =  0x00100000, //32
-    Sunday =    0x01000000, //64
-    Weekend=    0x01100000, //96
-    All =       0x01111111  //127
-    // MondayTuesday = 0x00000011, // not the typical way to do combined values
+  [Flags]
+  public enum TourDays : long {
+
+    None = 0,
+    Monday = 1 << 0,    //1  (0000-0001)
+    Tuesday = 1 << 1,   //2  (0000-0010)
+    Wednesday = 1 << 2, //4  (0000-0100)
+    Thursday = 1 << 3,  //8  (0000-1000)
+    Friday = 1 << 4,    //16 (0001-0000)
+    Saturday = 1 << 5,  //32 (0010-0000
+    Sunday = 1 << 6,    //64 (0100-0000
+    Weekend = Sunday | Saturday, //96 (0110-0000)
+
+
 
   }
 }

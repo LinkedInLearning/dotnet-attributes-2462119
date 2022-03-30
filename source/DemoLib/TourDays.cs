@@ -10,7 +10,7 @@ namespace DemoLib {
 	// .ToString() formatted as comma separated values
 
 	// bitwise operators
-	[Flags]
+	//[Flags]
 	public enum TourDays : long {
 
     None = 0,

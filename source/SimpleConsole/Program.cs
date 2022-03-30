@@ -9,29 +9,21 @@ public class SimpleConsole {
     //  The Railroad History tour is Saturday and Sunday.
 
     var tacoTuesdayTour = TourDays.Tuesday;
-    var waterfrontTour = TourDays.Monday | TourDays.Wednesday | TourDays.Friday;
+    var waterfrontTour = TourDays.Monday | TourDays.Wednesday | TourDays.Friday;  // (1 + 4 + 16 = 21)
 
-    var railroadTour1 = TourDays.Saturday | TourDays.Sunday;
-    var railroadTour2 = TourDays.Weekend;
+    var railroadTour = TourDays.Tuesday | TourDays.Thursday; // (2 + 8 = 10 )
+
+
 
     Console.WriteLine($"Taco Extravaganza  tour: {tacoTuesdayTour}");
 
     Console.WriteLine($"Bike the Waterfront tour: {waterfrontTour}");
 
-    Console.WriteLine($"Railroad History tour 1: {railroadTour1}");
-    Console.WriteLine($"Railroad History tour 2: {railroadTour2}");
+    Console.WriteLine($"Railroad History tour: {railroadTour}");
+
     Console.WriteLine();
 
-    var tour1 = new Tour();
-    var tour2 = new Tour();
 
-     tour1.TourDays = Enum.Parse<TourDays>("Thursday");
-
-    tour2.TourDays = Enum.Parse<TourDays>("Tuesday, Thursday");
-
-    Console.WriteLine($"Tour 1 instance: {tour1.TourDays}");
-
-    Console.WriteLine($"Tour 2 instance: {tour2.TourDays}");
   }
 }
 

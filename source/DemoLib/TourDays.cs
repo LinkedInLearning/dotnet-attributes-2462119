@@ -5,14 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DemoLib {
-  // Flag attribute
+	// Flags attribute
 
-  // .ToString() formatted as comma separated values
-  // .Parse(), parses comma separated string
+	// .ToString() formatted as comma separated values
 
-  // bitwise operators
-  [Flags]
-  public enum TourDays : long {
+	// bitwise operators
+	[Flags]
+	public enum TourDays : long {
 
     None = 0,
     Monday = 1 << 0,    //1  (0000-0001)

@@ -10,27 +10,27 @@
         Height="450"
         Width="800"
         FontSize='18'>
-  <Grid>
+	<Grid>
 
-    <WpfControlLib:IpAddress HorizontalAlignment='Left'
+		<WpfControlLib:IpAddress HorizontalAlignment='Left'
                              Margin='1004,231,0,0'
                              VerticalAlignment='Top' />
-    <WpfControlLib:IpAddress x:Name='iPControl1'
+		<WpfControlLib:IpAddress x:Name='iPControl1'
                              HorizontalAlignment='Left'
                              Margin='144,119,0,0'
                              VerticalAlignment='Top'
                              CurrentIP='12.13.15.71' />
-    <Button Content='Button'
+		<Button Content='Button'
             HorizontalAlignment='Left'
-            Margin='475,129,0,0'
+            Margin='450,129,0,0'
             VerticalAlignment='Top'
-            Click='Button_Click' />
-    <TextBlock x:Name='resultTextBox'
+            Click='Button_Click' Height="38" Width="108" />
+		<TextBlock x:Name='resultTextBox'
                HorizontalAlignment='Left'
                Margin='467,231,0,0'
                TextWrapping='Wrap'
                Text='TextBlock'
                VerticalAlignment='Top' />
 
-  </Grid>
+	</Grid>
 </Window>

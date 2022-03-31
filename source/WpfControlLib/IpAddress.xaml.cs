@@ -11,7 +11,7 @@ namespace WpfControlLib
       InitializeComponent();
     }
 
- 
+    [Category("IP Info")]
     public String CurrentIP
     {
       get

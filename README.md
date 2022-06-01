@@ -1,7 +1,12 @@
-# .NET 6 SDK Advanced Exploration: Attributes 
-This is the repository for the LinkedIn Learning course `.NET 6 SDK Advanced Exploration: Attributes`. The full course is available from [LinkedIn Learning][lil-course-url].
+# .NET 6 SDK Advanced Exploration: Attributes
+This is the repository for the LinkedIn Learning course .NET 6 SDK Advanced Exploration: Attributes. The full course is available from [LinkedIn Learning][lil-course-url].
 
-_See the readme file in the main branch for updated instructions and information._
+![.NET 6 SDK Advanced Exploration: Attributes][lil-thumbnail-url] 
+
+Attributes add metadata to your programs and allow you to annotate given types, assemblies, modules, and methods. They’re especially handy if you’re an advanced .NET developer, as they lend your code base more declarative power with the additional services of .NET tools and code libraries. In this course, senior LinkedIn Learning instructor Walt Ritscher shows you how to use predefined, standard .NET attributes as well as how to create custom attributes on your own.
+
+Learn about the features of attributes, how they function, and why they’re such a vital part of .NET programs. Get quick tips and user tricks on annotating your code like a seasoned pro, from testing for object quality to marking your testing methods. Along the way, Walt teaches you how to create custom attributes that meet the specific needs of your projects, such as attributes for the JSON serializer, PropertyGrid and the category attribute, the BindProperty attribute, and more.
+
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
 
@@ -21,14 +26,17 @@ To resolve this issue:
 	Commit changes using this command: git commit -m "some message"
 
 ## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+1. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
 
+### Instructor
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
+Walt Ritscher 
+                            
+Senior Staff Author
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
+                            
 
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/walt-ritscher).
+
+[lil-course-url]: https://www.linkedin.com/learning/dot-net-6-sdk-advanced-exploration-attributes
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2462119/2462119-1652724554184-16x9.jpg
